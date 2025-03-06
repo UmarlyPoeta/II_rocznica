@@ -23,6 +23,16 @@ document.getElementById('imageInput').addEventListener('change', function(event)
                 downloadLink.href = dataUrl;
                 downloadLink.download = 'przetworzone_zdjecie.jpg';
                 downloadLink.style.display = 'block';
+
+                // Wysyłanie zdjęcia na serwer ESP32
+                fetch('/upload', {
+                    method: 'POST',
+                    body: JSON.stringify({ image: dataUrl }),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Błąd:', error));
             };
             img.src = e.target.result;
         };
