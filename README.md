@@ -1,5 +1,3 @@
-# Prezent dla mojej dziewczyny
-
 To jest statyczna strona internetowa, która pozwala przesłać zdjęcie, przeskalować je do rozmiaru 128x160 pikseli, przekonwertować do formatu baseline JPEG i pobrać przetworzone zdjęcie.
 
 ## Jak używać
